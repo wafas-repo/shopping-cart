@@ -1,0 +1,27 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rosybrown;
+    padding: 10px;
+    font-family: cursive ;
+    min-height: 5rem;
+}
+
+.linkStyle {
+    text-decoration: none;
+    color: inherit;
+}
+
+.center {
+    letter-spacing: 2.5px;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
