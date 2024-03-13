@@ -1,0 +1,23 @@
+.grid {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+.productCards {
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding: 2em;
+}
+
+.prodCard {
+    background-color: aqua;
+    height: 300px;
+    width: 11rem;
+}
