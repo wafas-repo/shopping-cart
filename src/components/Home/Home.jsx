@@ -38,15 +38,16 @@ const Home = () => {
   return (
     <>
         <div>
-            <section>
-                <div className={styles.grid}>
-                    <div className={styles.productCards}>
+            <section >
+                <div className={styles.gridContainer}>
                         {products.map((product) => {
-                            return <p className={styles.prodCard} key={product.id}>{product.title}</p>
+                            return (
+                                <div className={styles.gridItem} key={product.id}>
+                                  <p >{product.title}</p>
+                                </div>
+                            )
                         })}
-                    </div>
                 </div>
-
             </section>
         </div>
     </>

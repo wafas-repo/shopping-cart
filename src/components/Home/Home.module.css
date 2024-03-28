@@ -1,23 +1,44 @@
-.grid {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem;
-
-}
-
-.productCards {
-
+.gridContainer {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 2rem;
-    padding: 2em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 2rem;
 }
 
-.prodCard {
-    background-color: aqua;
-    height: 300px;
-    width: 11rem;
+.gridItem {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    height: 28rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridItem {
+        font-size: 14px;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .gridItem {
+        font-size: 10px;
+        height: 19rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .gridItem {
+        font-size: 12px;
+        height: 22rem;
+        
+    }
 }
