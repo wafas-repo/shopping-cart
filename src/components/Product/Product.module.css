@@ -1,0 +1,43 @@
+.gridItem {
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.productContainer {
+    border: 1px #e4e4e4 solid;
+    height: 300px;
+    overflow: hidden;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.gridItem img {
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    height: auto; /* Maintain aspect ratio for images */
+}
+
+@media (max-width: 800px) {
+    .gridItem {
+        font-size: 10px;
+        height: 19rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .gridItem {
+        font-size: 12px;
+        height: 22rem;
+        
+    }
+}

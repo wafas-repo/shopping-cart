@@ -7,16 +7,6 @@
     margin-top: 2rem;
 }
 
-.gridItem {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-    height: 28rem;
-    transition: all 0.3s ease;
-}
-
 @media (max-width: 768px) {
     .gridContainer {
         grid-template-columns: repeat(2, 1fr);
@@ -25,20 +15,5 @@
     .gridItem {
         font-size: 14px;
         height: 18rem;
-    }
-}
-
-@media (max-width: 800px) {
-    .gridItem {
-        font-size: 10px;
-        height: 19rem;
-    }
-}
-
-@media (max-width: 920px) {
-    .gridItem {
-        font-size: 12px;
-        height: 22rem;
-        
     }
 }
