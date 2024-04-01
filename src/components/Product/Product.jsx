@@ -11,14 +11,21 @@ const {id, image, category, price, title} = product;
      <div className={styles.productContainer}>
         <div className={styles.imageContainer}>
             {/* image */}
-            <div className={styles.image}>
-                <img src={image} alt="" />
-            </div>
+            <Link to={`/product/${id}`}>
+                <div className={styles.image}>
+                    <img src={image} alt="" />
+                </div>
+            </Link>
         </div>
      </div>
-     <div>
-        <h2>{title}</h2>
-        <div>{price}</div>
+     <div className={styles.AddButtonDiv}>
+        <button className={styles.AddButton}>Add to cart</button>
+     </div>
+     <div className={styles.desc}>
+        <Link style={{ textDecoration: 'none' }} to={`/product/${id}`}>
+            <h5 className={styles.ProductTitle}>{title}</h5>
+        </Link>
+        <div>${price}</div>
      </div>
    </div>
   )

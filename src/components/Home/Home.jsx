@@ -10,7 +10,6 @@ console.log(products)
   
   return (
     <>
-        <h1>Home</h1>
         <div>
             <section >
                 <div className={styles.gridContainer}>

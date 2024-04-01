@@ -1,5 +1,4 @@
 .gridItem {
-    text-align: center;
     padding: 20px;
     transition: all 0.3s ease;
 }
@@ -25,6 +24,30 @@
 .gridItem img {
     max-width: 100%; /* Ensure images don't exceed their container width */
     height: auto; /* Maintain aspect ratio for images */
+}
+
+.AddButtonDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.AddButton {
+    padding: 8px;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    margin-top: 5px;
+}
+
+.ProductTitle {
+
+    color: black;
+    font-weight: 800;
+
 }
 
 @media (max-width: 800px) {

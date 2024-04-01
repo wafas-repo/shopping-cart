@@ -11,6 +11,7 @@ import './index.css'
 import Layout from './pages/Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import ProductProvider from './contexts/ProductContext.jsx'
+import SidebarProvider from './contexts/SidebarContext.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,9 +24,11 @@ const router = createBrowserRouter(
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ProductProvider>
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
-  </ProductProvider>,
+  <SidebarProvider>
+    <ProductProvider>
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+    </ProductProvider>
+  </SidebarProvider>,
 )
