@@ -8,10 +8,20 @@ import { SidebarContext } from '../../contexts/SidebarContext';
 const Header = () => {
   const {isOpen, setIsOpen} = useContext(SidebarContext);
   return (
+  <header className={styles.navbar}>
+
     <div>
-      <div>Header</div>
       <div onClick={() => setIsOpen(!isOpen)}><IoMdMenu /></div>
     </div>
+     <div className={styles.center}>
+        <Link className={styles.linkStyle} to=''>Nabila's Couture</Link>
+     </div>
+     <div className={styles.right}>
+      <Link to='/Cart'>
+        <FaShoppingCart />
+      </Link>
+    </div>
+   </header>
     // <header className={styles.navbar}>
     //   <div onClick={console.log('clicked')}>
     //     open/close
@@ -24,16 +34,7 @@ const Header = () => {
     //       <div className=''>
     //           <Link className={styles.linkStyle} to=''>Kids</Link>
     //       </div> */}
-    //   </div>
-
-    //   <div className={styles.center}>
-    //       <Link className={styles.linkStyle} to=''>Nabila's Couture</Link>
-    //   </div>
-
-    //   <div className={styles.right}>
-    //       <FaShoppingCart />
-    //   </div>
-        
+    //   </div>    
     // </header>
   )
 }

@@ -1,10 +1,11 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import styles from "../Product/Product.module.css"
-import {} from 'react-icons/bs'
+import { CartContext } from "../../contexts/CartContext"
+
 
 const Product = ({product}) => {
-console.log(product)
+const {addToCart} = useContext(CartContext)
 const {id, image, category, price, title} = product;
   return (
    <div className={styles.gridItem} key={product.id}>
@@ -19,7 +20,7 @@ const {id, image, category, price, title} = product;
         </div>
      </div>
      <div className={styles.AddButtonDiv}>
-        <button className={styles.AddButton}>Add to cart</button>
+        <button onClick={() => addToCart(product, id)} className={styles.AddButton}>Add to cart</button>
      </div>
      <div className={styles.desc}>
         <Link style={{ textDecoration: 'none' }} to={`/product/${id}`}>

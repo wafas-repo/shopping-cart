@@ -2,8 +2,6 @@ import React, {useState, createContext, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import styles from '../Sidebar/Sidebar.module.css'
 
-import CartItem from '../CartItem'
-
 import { SidebarContext } from '../../contexts/SidebarContext'
 
 const Sidebar = () => {
