@@ -24,10 +24,17 @@ const CartProvider = ({children}) => {
     }
   };
 
+  const removeFromCart = (id) => {
+    const newCart = cart.filter((item) => {
+        return item.id !== id;
+    });
+    setCart(newCart);
+  }
+
   
 
   return (
-    <CartContext.Provider value={{cart, addToCart}}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{cart, addToCart, removeFromCart}}>{children}</CartContext.Provider>
   )
 }
 

@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../../contexts/CartContext';
 
 const CartItem = ({item}) => {
+  const { removeFromCart } = useContext(CartContext);
   const {id, title, image, price, amount} = item;
   return (
     <>
 
       <div className="cart-product">
-            <img src={image} alt={title} />
-            <div>
-              <h3>{title}</h3>
-              <button>Remove</button>
-            </div>
+        <Link to={`/product/${id}`}>
+          <img src={image} alt={title} />
+        </Link>
+            
+          <div>
+            <h3>{title}</h3>
+            <button onClick={() => removeFromCart(id)}>Remove</button>
+          </div>
       </div>
       <div className="cart-prod-price">
           ${price}

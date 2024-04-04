@@ -10,6 +10,7 @@ import App from './App.jsx'
 import './index.css'
 import Layout from './pages/Layout.jsx'
 import Home from './components/Home/Home.jsx'
+import ProductDetails from './pages/ProductDetails.jsx'
 import ProductProvider from './contexts/ProductContext.jsx'
 import SidebarProvider from './contexts/SidebarContext.jsx'
 import CartProvider from './contexts/CartContext.jsx'
@@ -19,7 +20,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
-      <Route path="/product:id" element='' />
+      <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="/Cart" element={<Cart />} />
     </Route>
   )
