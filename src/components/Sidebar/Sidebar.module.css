@@ -2,8 +2,6 @@
     position: fixed; 
     top: 0; 
     z-index: 20; 
-    padding-left: 1rem;
-    padding-right: 1rem; 
     width: 100%; 
     height: 100%; 
     background-color: #ffffff; 
@@ -25,4 +23,42 @@
 
 
 
+}
+
+.sidebarTop {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    border-bottom: 1px solid black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.sidebarTitle {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    margin-left: 3rem;
+}
+
+.sidebarIcon {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    cursor: pointer;
+}
+
+.navItem {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    border-bottom: 1px solid black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+
+}
+
+.navItemIcon {
+    cursor: pointer;
 }
