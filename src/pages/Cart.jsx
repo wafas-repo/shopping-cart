@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
 
-  const {cart} = useContext(CartContext)
+  const { cart, clearCart } = useContext(CartContext)
   return (
     <div>
       <div className='cart-container'>
@@ -32,7 +32,7 @@ const Cart = () => {
               }) }
             </div>
             <div className="cart-summary">
-              <button className="clear-btn">
+              <button onClick={() => clearCart()} className="clear-btn">
                 Clear Cart
               </button>
               <div className="cart-checkout">

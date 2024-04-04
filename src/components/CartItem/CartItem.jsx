@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../../contexts/CartContext';
 
 const CartItem = ({item}) => {
-  const { removeFromCart } = useContext(CartContext);
+  const { removeFromCart, increaseAmount, decreaseAmount } = useContext(CartContext);
   const {id, title, image, price, amount} = item;
   return (
     <>
@@ -22,9 +22,9 @@ const CartItem = ({item}) => {
           ${price}
       </div>
       <div className="cart-prod-quantity">
-        <button>-</button>
+        <button onClick={() => decreaseAmount(id)}>-</button>
         <div className="count">{amount}</div>
-        <button>+</button>
+        <button onClick={() => increaseAmount(id)}>+</button>
       </div>
       <div className="cart-product-total-price">
           ${price * amount}
