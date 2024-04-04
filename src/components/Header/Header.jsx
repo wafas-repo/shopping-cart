@@ -4,23 +4,31 @@ import styles from '../Header/Header.module.css'
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { SidebarContext } from '../../contexts/SidebarContext';
+import { CartContext } from '../../contexts/CartContext';
 
 const Header = () => {
   const {isOpen, setIsOpen} = useContext(SidebarContext);
+  const { itemAmount } = useContext(CartContext);
   return (
   <header className={styles.navbar}>
+    <div className={styles.headerContainer}>
 
-    <div>
-      <div onClick={() => setIsOpen(!isOpen)}><IoMdMenu /></div>
+      <div>
+        <div onClick={() => setIsOpen(!isOpen)}><IoMdMenu className={styles.menuIcon} /></div>
+      </div>
+      <div className={styles.center}>
+          <Link className={styles.linkStyle} to=''>Nabila's Couture</Link>
+      </div>
+      <div className={styles.right}>
+        <Link to='/Cart'>
+          <FaShoppingCart className={styles.cartIcon} />
+        </Link>
+        <div className={styles.cartAmount}>{itemAmount}</div>
+      </div>
+
     </div>
-     <div className={styles.center}>
-        <Link className={styles.linkStyle} to=''>Nabila's Couture</Link>
-     </div>
-     <div className={styles.right}>
-      <Link to='/Cart'>
-        <FaShoppingCart />
-      </Link>
-    </div>
+
+    
    </header>
     // <header className={styles.navbar}>
     //   <div onClick={console.log('clicked')}>

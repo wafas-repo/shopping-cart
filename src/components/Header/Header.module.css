@@ -1,8 +1,5 @@
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: rosybrown;
     padding: 10px;
     font-family: cursive ;
@@ -24,4 +21,42 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+
+.right {
+    display: flex; 
+    position: relative; 
+    cursor: pointer; 
+    
+}
+
+.cartIcon {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.menuIcon {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.cartAmount {
+    position: absolute; 
+    display: flex;
+    right: -0.5rem; 
+    bottom: -0.5rem; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 9999px; 
+    color: #ffffff; 
+    background-color: #EF4444; 
+    width: 18px;
+    height: 18px;
+}
+
+.headerContainer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 100%; 
 }

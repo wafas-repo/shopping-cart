@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
 
-  const { cart, clearCart } = useContext(CartContext)
+  const { cart, clearCart, total} = useContext(CartContext)
   return (
     <div>
       <div className='cart-container'>
@@ -38,7 +38,7 @@ const Cart = () => {
               <div className="cart-checkout">
                 <div className="subtotal">
                   <span>Subtotal</span>
-                  <span className="amount">${}</span>
+                  <span className="amount">${parseFloat(total).toFixed(2)}</span>
                 </div>
                 <p>Taxes and shipping calculated at checkout</p>
                 <button>Check out</button>
