@@ -15,7 +15,7 @@ const Cart = () => {
         { cart.length === 0 ? (
           <div className="cart-empty">
             <p>Your cart is currently empty</p>
-            <p>Click <Link to=''>here</Link> to continue shopping</p>
+            <p>Click <Link to='/'>here</Link> to continue shopping</p>
           </div>
         ) : (
           <div>

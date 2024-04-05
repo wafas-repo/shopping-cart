@@ -33,6 +33,10 @@
 
 .AddButton {
     padding: 8px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .desc {
